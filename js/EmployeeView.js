@@ -25,6 +25,9 @@ var EmployeeView = function(employee) {
             function() {
                 alert('Error getting location');
             });
+			function() {
+                alert('location: ' +  position.coords.latitude + ',' +position.coords.longitude);
+            });
         return false;
     };
 
