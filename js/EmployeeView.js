@@ -21,12 +21,10 @@ var EmployeeView = function(employee) {
         navigator.geolocation.getCurrentPosition(
             function(position) {
                 $('.location', this.el).html(position.coords.latitude + ',' +position.coords.longitude);
+				alert('location: ' +  position.coords.latitude + ',' +position.coords.longitude);
             },
             function() {
                 alert('Error getting location');
-            });
-			function() {
-                alert('location: ' +  position.coords.latitude + ',' +position.coords.longitude);
             });
         return false;
     };
